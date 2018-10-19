@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.InformacionActivity"
+    android:layout_margin="16dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rlt1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#d7dbdd"
+        android:padding="9dp">
+
+        <TextView
+            android:id="@+id/txtNombreEmp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre de la empresa"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/txtDireccion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Direccion de la empresa"
+            android:layout_below="@+id/txtNombreEmp"/>
+        <TextView
+            android:id="@+id/txtTelefono"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Telefono de la empresa"
+            android:layout_below="@+id/txtDireccion"/>
+        <TextView
+            android:id="@+id/txtCategoria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtTelefono"
+            android:textStyle="bold"
+            android:text="Categoria"/>
+        <ImageView
+            android:id="@+id/logoEmp"
+            android:layout_width="94dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            tools:src="@drawable/ic_question"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlt2"
+        android:layout_width="match_parent"
+        android:layout_height="316dp"
+        android:layout_below="@+id/rlt1"
+        android:layout_marginTop="15dp"
+        android:background="#d7dbdd"
+        android:padding="9dp">
+
+        <TextView
+            android:id="@+id/txtSimple"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Descripcion:" />
+
+        <TextView
+            android:id="@+id/txtDescripcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtSimple"
+            android:layout_marginTop="20dp"
+            android:textSize="30dp"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Informacion completa de la aplicacion" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlt2"
+        android:gravity="center">
+
+         <Button
+             android:id="@+id/btnLlamar"
+             android:layout_width="60dp"
+             android:layout_height="wrap_content"
+             android:background="@drawable/phone"
+             />
+
+        <Button
+            android:id="@+id/btnWeb"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/btnLlamar"
+            android:background="@drawable/web"
+            />
+        <Button
+            android:id="@+id/btnEmail"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/btnWeb"
+            android:background="@drawable/email"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>
